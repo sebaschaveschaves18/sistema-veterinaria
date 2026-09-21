@@ -1,0 +1,242 @@
+[
+  {
+    "model": "clinica.propietario",
+    "pk": 1,
+    "fields": {
+      "identificacion": "1-1111-1111",
+      "nombre": "Juan Perez",
+      "telefono": "8888-1111",
+      "email": "juan@example.com"
+    }
+  },
+  {
+    "model": "clinica.propietario",
+    "pk": 2,
+    "fields": {
+      "identificacion": "2-2222-2222",
+      "nombre": "Maria Rodriguez",
+      "telefono": "8888-2222",
+      "email": "maria@example.com"
+    }
+  },
+  {
+    "model": "clinica.propietario",
+    "pk": 3,
+    "fields": {
+      "identificacion": "3-3333-3333",
+      "nombre": "Carlos Jimenez",
+      "telefono": "8888-3333",
+      "email": "carlos@example.com"
+    }
+  },
+  {
+    "model": "clinica.propietario",
+    "pk": 4,
+    "fields": {
+      "identificacion": "4-4444-4444",
+      "nombre": "Ana Mora",
+      "telefono": "8888-4444",
+      "email": "ana@example.com"
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 1,
+    "fields": {
+      "nombre": "Max",
+      "especie": "Perro",
+      "raza": "Golden",
+      "fecha_nacimiento": "2022-03-10",
+      "peso": "20.50",
+      "activo": true,
+      "propietario": 1
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 2,
+    "fields": {
+      "nombre": "Luna",
+      "especie": "Gato",
+      "raza": "Siamés",
+      "fecha_nacimiento": "2021-07-15",
+      "peso": "4.20",
+      "activo": true,
+      "propietario": 1
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 3,
+    "fields": {
+      "nombre": "Rocky",
+      "especie": "Perro",
+      "raza": "Labrador",
+      "fecha_nacimiento": "2020-11-20",
+      "peso": "25.30",
+      "activo": true,
+      "propietario": 2
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 4,
+    "fields": {
+      "nombre": "Mia",
+      "especie": "Gato",
+      "raza": "Persa",
+      "fecha_nacimiento": "2023-01-05",
+      "peso": "3.80",
+      "activo": true,
+      "propietario": 2
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 5,
+    "fields": {
+      "nombre": "Toby",
+      "especie": "Perro",
+      "raza": "Beagle",
+      "fecha_nacimiento": "2019-05-18",
+      "peso": "12.40",
+      "activo": false,
+      "propietario": 3
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 6,
+    "fields": {
+      "nombre": "Nina",
+      "especie": "Conejo",
+      "raza": "Enano",
+      "fecha_nacimiento": "2022-09-09",
+      "peso": "2.10",
+      "activo": true,
+      "propietario": 3
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 7,
+    "fields": {
+      "nombre": "Bruno",
+      "especie": "Perro",
+      "raza": "Pastor Alemán",
+      "fecha_nacimiento": "2018-12-01",
+      "peso": "31.00",
+      "activo": true,
+      "propietario": 4
+    }
+  },
+  {
+    "model": "clinica.mascota",
+    "pk": 8,
+    "fields": {
+      "nombre": "Kiwi",
+      "especie": "Ave",
+      "raza": "Canario",
+      "fecha_nacimiento": "2024-02-22",
+      "peso": "0.30",
+      "activo": true,
+      "propietario": 4
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 1,
+    "fields": {
+      "mascota": 1,
+      "fecha": "2026-09-01",
+      "motivo": "Control general",
+      "diagnostico": "Buen estado general",
+      "tratamiento": "Vitaminas",
+      "costo": "25000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 2,
+    "fields": {
+      "mascota": 2,
+      "fecha": "2026-09-02",
+      "motivo": "Revision",
+      "diagnostico": "Sin complicaciones",
+      "tratamiento": "Observacion",
+      "costo": "18000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 3,
+    "fields": {
+      "mascota": 3,
+      "fecha": "2026-09-03",
+      "motivo": "Dolor muscular",
+      "diagnostico": "Inflamacion leve",
+      "tratamiento": "Reposo y medicacion",
+      "costo": "32000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 4,
+    "fields": {
+      "mascota": 4,
+      "fecha": "2026-09-04",
+      "motivo": "Vacunacion",
+      "diagnostico": "Vacunas al dia",
+      "tratamiento": "Aplicacion de vacuna",
+      "costo": "22000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 5,
+    "fields": {
+      "mascota": 5,
+      "fecha": "2026-09-05",
+      "motivo": "Revision de peso",
+      "diagnostico": "Sobrepeso leve",
+      "tratamiento": "Cambio de alimentacion",
+      "costo": "20000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 6,
+    "fields": {
+      "mascota": 6,
+      "fecha": "2026-09-06",
+      "motivo": "Control digestivo",
+      "diagnostico": "Funcion normal",
+      "tratamiento": "Dieta balanceada",
+      "costo": "15000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 7,
+    "fields": {
+      "mascota": 7,
+      "fecha": "2026-09-07",
+      "motivo": "Revision preventiva",
+      "diagnostico": "Buen estado general",
+      "tratamiento": "Ninguno",
+      "costo": "27000.00"
+    }
+  },
+  {
+    "model": "clinica.consultaveterinaria",
+    "pk": 8,
+    "fields": {
+      "mascota": 8,
+      "fecha": "2026-09-08",
+      "motivo": "Control",
+      "diagnostico": "Estado estable",
+      "tratamiento": "Ninguno",
+      "costo": "12000.00"
+    }
+  }
+]

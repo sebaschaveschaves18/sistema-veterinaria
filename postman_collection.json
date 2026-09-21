@@ -1,0 +1,236 @@
+{
+  "info": {
+    "name": "Sistema Gestion Veterinaria",
+    "_postman_id": "c1df9d8f-bd3d-4b4a-9c00-2b2ed5ec2026",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "mascota_id",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET mascotas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", ""]
+        }
+      }
+    },
+    {
+      "name": "POST mascota valida",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Max\",\n  \"especie\": \"Perro\",\n  \"raza\": \"Golden\",\n  \"fecha_nacimiento\": \"2022-03-10\",\n  \"peso\": 20.5,\n  \"activo\": true,\n  \"propietario\": 1\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", ""]
+        }
+      }
+    },
+    {
+      "name": "POST mascota peso 0",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Max\",\n  \"especie\": \"Perro\",\n  \"raza\": \"Golden\",\n  \"peso\": 0,\n  \"activo\": true,\n  \"propietario\": 1\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", ""]
+        }
+      }
+    },
+    {
+      "name": "GET mascota por id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/{{mascota_id}}/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", "{{mascota_id}}", ""]
+        }
+      }
+    },
+    {
+      "name": "PATCH mascota",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"peso\": 21.0\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/{{mascota_id}}/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", "{{mascota_id}}", ""]
+        }
+      }
+    },
+    {
+      "name": "GET mascotas page 2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/?page=2",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", ""],
+          "query": [{"key":"page","value":"2"}]
+        }
+      }
+    },
+    {
+      "name": "GET mascotas especie Perro",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/mascotas/?especie=Perro",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "mascotas", ""],
+          "query": [{"key":"especie","value":"Perro"}]
+        }
+      }
+    },
+    {
+      "name": "POST consulta costo negativo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"mascota\": 1,\n  \"motivo\": \"Control\",\n  \"diagnostico\": \"Revision\",\n  \"tratamiento\": \"Ninguno\",\n  \"costo\": -5\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/clinica/api/consultas/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "consultas", ""]
+        }
+      }
+    },
+    {
+      "name": "POST token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"usuario\",\n  \"password\": \"clave\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/token/",
+          "host": ["{{base_url}}"],
+          "path": ["api", "token", ""]
+        }
+      }
+    },
+    {
+      "name": "GET perfil sin token",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/perfil/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "perfil", ""]
+        }
+      }
+    },
+    {
+      "name": "GET perfil con token",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/perfil/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "perfil", ""]
+        }
+      }
+    },
+    {
+      "name": "GET estadisticas",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/estadisticas/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "estadisticas", ""]
+        }
+      }
+    },
+    {
+      "name": "GET sesion",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/clinica/api/sesion/",
+          "host": ["{{base_url}}"],
+          "path": ["clinica", "api", "sesion", ""]
+        }
+      }
+    }
+  ]
+}
